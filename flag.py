@@ -55,7 +55,7 @@ for i in range(18, 18 + 8): # 18 -> 25
 	flag+=chr(encrypt_flag[i] ^ (0xab))
 
 
-flag += "_nt9lob4Lfl49_" #File kiTu26Den38.py
+flag += "_nt9lob4Lfl49_" # step3.py
 
 flag += "s0F7w4r38r34Kp01n7_" #Step4.py
 
