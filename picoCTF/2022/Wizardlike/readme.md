@@ -6,7 +6,7 @@
 
 Tuy nhiên sau 1 lúc tìm hiểu thì có thể thấy dù đã cố qua tất cả các map nhưng không có cách nào có được flag
 
-Từ việc đọc hind => phải đi xuyên tường mới có thể tìm được flag
+Từ việc đọc hint => phải đi xuyên tường mới có thể tìm được flag
 
 Vào hàm main, có thể thấy các đoạn code update lệnh dịch chuyển
 
