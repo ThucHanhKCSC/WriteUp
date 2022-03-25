@@ -114,7 +114,7 @@ s.check()
 print(s.model())
 ```
 
-Cách dùng thế này là sai:
+Cách dùng thế này là sai, (thay << 8 bằng << 1 thì lại đúng vì z3 rất bủh):
 
 ![sned](https://user-images.githubusercontent.com/101321172/160099402-78f45a90-0f98-4a37-a1ad-26f325c24853.jpg)
 
