@@ -110,10 +110,13 @@ int main() {
 
   k = 32;
   i = 0;
+  
+  
   do {
     i += 0x123457898765432;
     --k;
   } while (k);
+
 
   int idx = 0;
   do {
