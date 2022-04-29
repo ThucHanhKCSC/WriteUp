@@ -118,6 +118,8 @@ int main() {
   int idx = 0;
   do {
     j = 32;
+    
+    
     do {
       flag[idx + 1] -= (i + flag[idx]) ^ (16 * flag[idx] - 0x2CBDA60BFD707FD3) ^
                        ((flag[idx] >> 5) + 0x424F0D99A012A826);
@@ -127,12 +129,16 @@ int main() {
       i -= 0x123457898765432;
       --j;
     } while (j);
+
+    
     k = 32;
     i = 0;
     do {
       i += 0x123457898765432;
       --k;
     } while (k);
+    
+    
     idx += 2;
     --v8;
   } while (v8);
