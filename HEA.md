@@ -100,66 +100,46 @@ Code giải:
 ```C
 #include <iostream>
 
-int main(){
-	unsigned __int64 flag  = 0x49d5350d575ca310;
-	unsigned __int64 flag2 = 0xbffc208e9ef90f6a;
+int main() {
+  unsigned __int64 flag[10] = {0x49d5350d575ca310, 0xbffc208e9ef90f6a,
+                               0x644681c7bb0cb7a2, 0x83e83897e0b61bea,
+                               0x13ce365e5a9f6ddd, 0x5b575f2b16d0f43d,
+                               0xe537e3c7e41557c0, 0x89bda52571c130de,
+                               0x2c9b3c6c4919e15f, 0x30a09411d777e851};
+  __int64 i = 0, j = 32, v8 = 5, k;
 
-	unsigned __int64 flag3 = 0x644681c7bb0cb7a2;
-	unsigned __int64 flag4 = 0x83e83897e0b61bea;
+  k = 32;
+  i = 0;
+  do {
+    i += 0x123457898765432;
+    --k;
+  } while (k);
 
-	unsigned __int64 flag5 = 0x13ce365e5a9f6ddd;
-	unsigned __int64 flag6 = 0x5b575f2b16d0f43d;
+  int idx = 0;
+  do {
+    j = 32;
+    do {
+      flag[idx + 1] -= (i + flag[idx]) ^ (16 * flag[idx] - 0x2CBDA60BFD707FD3) ^
+                       ((flag[idx] >> 5) + 0x424F0D99A012A826);
+      flag[idx] -= (i + flag[idx + 1]) ^
+                   (16 * flag[idx + 1] - 0x1EC32D622D0480D8) ^
+                   ((flag[idx + 1] >> 5) + 0x488D27F32AE91451);
+      i -= 0x123457898765432;
+      --j;
+    } while (j);
+    k = 32;
+    i = 0;
+    do {
+      i += 0x123457898765432;
+      --k;
+    } while (k);
+    idx += 2;
+    --v8;
+  } while (v8);
 
-	unsigned __int64 flag7 = 0xe537e3c7e41557c0;
-	unsigned __int64 flag8 = 0x89bda52571c130de;
-
-	unsigned __int64 flag9 = 0x2c9b3c6c4919e15f;
-	unsigned __int64 flag10 = 0x30a09411d777e851;
-
-	__int64 i = 0;
-
-	__int64 j = 32, v8 = 5;
-
-	do{
-
-		i += 0x123457898765432;
-		--j;
-	}
-	while(j);
-
-	j = 32;
-		do{
-			flag2 -= (i + flag) ^ (16 * flag - 0x2CBDA60BFD707FD3) ^ ((flag >> 5) + 0x424F0D99A012A826);
-			flag -= (i + flag2) ^ (16 * flag2 - 0x1EC32D622D0480D8) ^ ((flag2 >> 5) + 0x488D27F32AE91451);
-
-			flag4 -= (i + flag3) ^ (16 * flag3 - 0x2CBDA60BFD707FD3) ^ ((flag3 >> 5) + 0x424F0D99A012A826);
-			flag3 -= (i + flag4) ^ (16 * flag4 - 0x1EC32D622D0480D8) ^ ((flag4 >> 5) + 0x488D27F32AE91451);
-
-			flag6 -= (i + flag5) ^ (16 * flag5 - 0x2CBDA60BFD707FD3) ^ ((flag5 >> 5) + 0x424F0D99A012A826);
-			flag5 -= (i + flag6) ^ (16 * flag6 - 0x1EC32D622D0480D8) ^ ((flag6 >> 5) + 0x488D27F32AE91451);
-
-			flag8 -= (i + flag7) ^ (16 * flag7 - 0x2CBDA60BFD707FD3) ^ ((flag7 >> 5) + 0x424F0D99A012A826);
-			flag7 -= (i + flag8) ^ (16 * flag8 - 0x1EC32D622D0480D8) ^ ((flag8 >> 5) + 0x488D27F32AE91451);
-
-			flag10 -= (i + flag9) ^ (16 * flag9 - 0x2CBDA60BFD707FD3) ^ ((flag9 >> 5) + 0x424F0D99A012A826);
-			flag9 -= (i + flag10) ^ (16 * flag10 - 0x1EC32D622D0480D8) ^ ((flag10 >> 5) + 0x488D27F32AE91451);
-			//std::cout << "0x" <<std::hex << flag << "\n";
-			i -= 0x123457898765432;
-			--j;
-		}
-
-		while(j);
-		
-	std::cout <<  "0x" <<std::hex << flag << "\n";
-	std::cout  << "0x"<< std::hex << flag2 << "\n";
-	std::cout  << "0x"<< std::hex << flag3 << "\n";
-	std::cout  << "0x"<< std::hex << flag4 << "\n";
-	std::cout  << "0x"<< std::hex << flag5 << "\n";
-	std::cout  << "0x"<< std::hex << flag6 << "\n";
-	std::cout  << "0x"<< std::hex << flag7 << "\n";
-	std::cout  << "0x"<< std::hex << flag8 << "\n";
-	std::cout  << "0x"<< std::hex << flag9 << "\n";
-	std::cout  << "0x"<< std::hex << flag10 << "\n";
+  for (int i = 0; i < 10; i++) {
+    std::cout << "0x" << std::hex << flag[i] << "\n";
+  }
 }
 ```
 
