@@ -31,7 +31,7 @@ Việc này rõ ràng sẽ khiến luồng chương trình bị rối nếu giá
 
 Các kí tự sau cũng tương tự
 
-![writeup](https://user-images.githubusercontent.com/101321172/179649356-3e90e470-9161-4068-899f-62bccdab90a1.jpg)
+![writeup](https://user-images.githubusercontent.com/101321172/179649652-a44dfad8-f79b-4e21-bc0f-d86e3600f7b7.jpg)
 
 ![writeup](https://user-images.githubusercontent.com/101321172/179649420-f29c5c66-368f-4f2e-befc-12655984766a.jpg)
 
