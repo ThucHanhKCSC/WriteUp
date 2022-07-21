@@ -1,4 +1,5 @@
 from pwn import *
+# the first step is probably finding the right format of the flag, without the "a" and "d", the flag checker won't work
 
 #case = "T.m.............a.........b.....................}"
 '''
